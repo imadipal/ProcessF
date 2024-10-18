@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import AuthService from "../services/AuthService";
-import { Grid, Paper, Avatar, TextField, Button } from '@mui/material';
+import { Grid, Paper, Avatar, TextField, Button, Typography, Link, FormControlLabel, Checkbox } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'; // Note the change in import path for icons
 
 
 const QuestionView = () => {
     const [question, setQuestion] = useState(null);
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         const fetchQuestion = async () => {
