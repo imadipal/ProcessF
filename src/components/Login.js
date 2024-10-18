@@ -13,7 +13,7 @@ const Login = () => {
         e.preventDefault();
         try {
             await AuthService.login(username, password);
-            window.location.href = "/";
+            window.location.href = "/question";
         } catch (err) {
             setError("Login failed!");
         }
