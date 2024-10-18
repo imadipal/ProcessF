@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import AuthService from "../services/AuthService";
-import { Grid, Paper, Avatar, TextField, Button, Typography, Link, FormControlLabel, Checkbox } from '@mui/material';
+import { Grid, Paper, Avatar, TextField, Button } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined'; // Note the change in import path for icons
 
 
 const QuestionView = () => {
     const [question, setQuestion] = useState(null);
     const [error, setError] = useState("");
-    const [loading, setLoading] = useState(true);
-    const [completedQuestions, setCompletedQuestions] = useState([]);
 
     useEffect(() => {
         const fetchQuestion = async () => {
@@ -22,17 +20,7 @@ const QuestionView = () => {
             }
         };
 
-        const fetchCompletedQuestions = async () => {
-            try {
-                const response = await AuthService.getCompletedQuestions();
-                setCompletedQuestions(response.data);
-            } catch (err) {
-                console.log("Error fetching completed questions", err);
-            }
-        };
-
         fetchQuestion();
-        fetchCompletedQuestions();
     }, []);
 
     const handleMarkDone = async () => {
@@ -50,25 +38,6 @@ const QuestionView = () => {
     const btnstyle = { margin: '8px 0' };
 
     return (
-        // <div>
-        //     <h1>Questions</h1>
-        //     {loading ? (
-        //         <p>Loading...</p>
-        //     ) : (
-        //         <>
-        //             <h2>{question?.heading}</h2>
-        //             <p>{question?.questionText}</p>
-        //             <button onClick={handleMarkDone}>Mark as Done</button>
-        //         </>
-        //     )}
-        //
-        //     <h2>Completed Questions</h2>
-        //     <ul>
-        //         {completedQuestions.map((q) => (
-        //             <li key={q.questionId}>{q.questionId}</li>
-        //         ))}
-        //     </ul>
-        // </div>
 
         <Grid>
             <Paper elevation={10} style={paperStyle}>
