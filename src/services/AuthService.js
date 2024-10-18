@@ -26,9 +26,14 @@ const addQuestion = (question) => {
     return axios.post(`${API_URL}/admin/add-question`, question, { withCredentials: true });
 };
 
+const logout = () => {
+    return axios.post(`${API_URL}/auth/logout`, { withCredentials: true });
+};
+
 export default {
     register,
     login,
+    logout,
     getRandomQuestion,
     markQuestionAsDone,
     getCompletedQuestions,
