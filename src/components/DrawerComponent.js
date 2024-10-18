@@ -38,7 +38,7 @@ function DrawerComponent() {
                     </ListItem>
                     <ListItem onClick={() => setOpenDrawer(false)}>
                         <ListItemText>
-                            <Link to="/completedquestions">CompletedQuestions</Link>
+                            <Link to="/completedquestions">Completed Questions</Link>
                         </ListItemText>
                     </ListItem>
                 </List>

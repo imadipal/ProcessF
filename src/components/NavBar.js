@@ -62,7 +62,7 @@ function Navbar() {
                             Question
                         </Link>
                         <Link to="/completedquestions" className={classes.link}>
-                            CompletedQuestions
+                            Completed Questions
                         </Link>
 
                     </div>
