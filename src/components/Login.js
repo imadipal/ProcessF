@@ -19,7 +19,7 @@ const Login = () => {
         }
     };
 
-    const paperStyle = { padding: 20, height: 'auto', width: 280, margin: "20px auto" };
+    const paperStyle = { padding: 20, height: 'auto', width: 380, margin: "20px auto" };
     const avatarStyle = { backgroundColor: '#1bbd7e' };
     const btnstyle = { margin: '8px 0' };
 
@@ -73,7 +73,7 @@ const Login = () => {
 
                 <Typography>
                     Do you have an account?
-                    <Link href="/register" >
+                    <Link href="/register" style={{ marginLeft: '4px' }} >
                         Sign Up
                     </Link>
                 </Typography>
