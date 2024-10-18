@@ -54,7 +54,7 @@ const AdminDashboard = () => {
                         variant="outlined"
                         margin="normal"
                         multiline
-                        rows={25}
+                        rows={24}
                         fullWidth
                         required
                     />
