@@ -12,9 +12,8 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const data =await AuthService.login(username, password);
-            console.log(data);
-            //window.location.href = "/question";
+            await AuthService.login(username, password);
+            window.location.href = "/question";
         } catch (err) {
             setError("Login failed!");
         }

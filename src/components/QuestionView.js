@@ -14,6 +14,7 @@ const QuestionView = () => {
         const fetchQuestion = async () => {
             try {
                 const response = await AuthService.getRandomQuestion();
+                console.log(response);
                 setQuestion(response.data);
                 setLoading(false);
             } catch (err) {
