@@ -17,7 +17,6 @@ const Register = () => {
         try {
             await AuthService.register(username, password);
             await AuthService.login(username, password);
-            window.location.href = "/";
         } catch (err) {
             setError("Registration failed!");
         }
