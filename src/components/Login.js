@@ -14,7 +14,7 @@ const Login = () => {
         try {
             const data =await AuthService.login(username, password);
             console.log(data);
-            window.location.href = "/question";
+            //window.location.href = "/question";
         } catch (err) {
             setError("Login failed!");
         }
