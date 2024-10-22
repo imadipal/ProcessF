@@ -11,7 +11,7 @@ const login = (username, password) => {
 };
 
 const getRandomQuestion = () => {
-    return axios.get(`${API_URL}/user/get-random-question`, { withCredentials: true });
+    return axios.get(`${API_URL}/user/get-random-question`);
 };
 
 const markQuestionAsDone = (questionId) => {
