@@ -52,17 +52,15 @@ const QuestionView = () => {
                 {/* Wrap inputs and button inside a form */}
                 <form onSubmit={handleMarkDone}>
                     <TextField
-                        label='Heading'
                         type="text"
-                        placeholder={question?.heading}
+                        value={question?.heading || ''}
                         variant="outlined"
                         margin="normal"
                         fullWidth
                         required
                     />
                     <TextField
-                        label='Question Text'
-                        placeholder={question?.questionText}
+                        value={question?.questionText || ''}
                         type='text'
                         variant="outlined"
                         margin="normal"
