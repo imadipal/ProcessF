@@ -51,6 +51,7 @@ const QuestionView = () => {
                 </Grid>
                 {/* Wrap inputs and button inside a form */}
                 <form onSubmit={handleMarkDone}>
+                    <input type="hidden" name="questionId" value={question?.id || ''}/>
                     <TextField
                         type="text"
                         value={question?.heading || ''}

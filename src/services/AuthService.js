@@ -15,7 +15,7 @@ const getRandomQuestion = () => {
 };
 
 const markQuestionAsDone = (questionId) => {
-    return axios.post(`${API_URL}/user/mark-question`, { questionId }, { withCredentials: true });
+    return axios.post(`${API_URL}/user/mark-question`, { questionId: questionId }, { withCredentials: true });
 };
 
 const getCompletedQuestions = () => {
@@ -23,7 +23,7 @@ const getCompletedQuestions = () => {
 };
 
 const addQuestion = (question) => {
-    return axios.post(`${API_URL}/admin/add-question`, question, { withCredentials: true });
+    return axios.post(`${API_URL}/admin/add-question`, {question: question}, { withCredentials: true });
 };
 
 const logout = () => {

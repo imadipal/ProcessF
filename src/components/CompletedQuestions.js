@@ -34,11 +34,11 @@ const CompletedQuestions = () => {
                     <h2>Completed Questions</h2>
                 </Grid>
                 {/* Wrap inputs and button inside a form */}
-                <ul>
-                     {completedQuestions.map((q) => (
-                                 <li key={q.questionId}>{q.questionId}</li>
-                             ))}
-                </ul>
+                <ol>
+                    {completedQuestions.map((q) => (
+                        <li key={q.questionId}><strong>{q.heading}</strong></li>
+                    ))}
+                </ol>
             </Paper>
         </Grid>
     );
